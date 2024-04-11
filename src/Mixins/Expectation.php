@@ -638,6 +638,18 @@ final class Expectation
     }
 
     /**
+     * Asserts that the value is null.
+     *
+     * @return self<TValue>
+     */
+    public function toBeNotNull(string $message = ''): self
+    {
+        Assert::assertNotNull($this->value, $message);
+
+        return $this;
+    }
+
+    /**
      * Asserts that the value array has the provided $key.
      *
      * @return self<TValue>
